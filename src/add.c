@@ -208,8 +208,10 @@ static gchar* pal_add_get_recur(GDate* date)
         if( sscanf( selection, "%d%*s", &sel ) != 1 )
         {
             rl_ding();
+            g_free(selection);
             continue;
         }
+        g_free(selection);
 
         if( sel < 0 || sel >= PAL_NUM_EVENTTYPES )
         {
