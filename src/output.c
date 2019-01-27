@@ -631,6 +631,9 @@ int pal_output_date(GDate* date, gboolean show_empty_days, int selected_event)
 	    numlines++;
 	}
     }
+    
+    if(events != NULL)
+    g_list_free(events);
 
     return numlines;
 }
