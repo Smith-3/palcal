@@ -297,7 +297,7 @@ static gchar* pal_add_get_file(void)
 	
 	prompt_again = FALSE;
 
-	filename = pal_rl_get_line_default(_("Filename: "), y, 0, g_strdup("~/.pal/"));
+	filename = pal_rl_get_line_default(_("Filename: "), y, 0, "~/.pal/");
 	
 
 	/* clear any filename completions */
